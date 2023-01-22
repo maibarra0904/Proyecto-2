@@ -187,14 +187,14 @@ h3 {
 }
 
 .Nimage {
-    
+    width: 100%;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background-image: url(../img/nosotros.jpg);
+    display:flex;
+    /*background-image: url(../img/nosotros.jpg);*/
     background-repeat: no-repeat; /*Impide el comportamiento por default de una imagen
     que es repetirse si el tamaño del grid es mayor que el de la imagen*/
     background-size: cover; /*Rellena la imagen en todo el grid*/
-    
     
 }
 
@@ -205,15 +205,16 @@ h3 {
     }
     
     .Nimage {
+        display: inline;
         grid-row: 1 / 2;
         grid-column: 2 / 3;
-        background-image: url(../img/nosotros.jpg);
-        background-position:top;
-        background-size:cover;
+        /*background-image: url(../img/nosotros.jpg);*/
+        /*background-position:top;*/
+        /*background-size:cover;*/
     }     
 }
 
-.flexBuy {
+.gridBuy {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(2,1fr);
@@ -222,11 +223,31 @@ h3 {
 }
 
 @media (min-width: 768px) {
-    .flexBuy {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    .gridBuy {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(1,1fr);
     }
+}
+
+.NiconTitle {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.NiconPar {
+    color: var(--blanco);
+    text-align: center;
+    width: 100%;
+    
+}
+
+.Pimage {
+    width:100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:auto;
 }
 
 .footer {
@@ -234,6 +255,7 @@ h3 {
     padding: 1rem 0;
     margin-top: 2rem;
     line-height: 1.2;
+    width: 100%;
 }
 
 .footer__texto {
